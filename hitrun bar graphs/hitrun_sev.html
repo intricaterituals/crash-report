@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.4.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="48f75e83-163b-43be-a239-7aef5828a4f6"></div>
+        </div>
+        
+        <script type="text/javascript">
+            (function() {
+          var fn = function() {
+            Bokeh.safely(function() {
+              var docs_json = {"8f849abb-56a7-43d8-a27e-9ce2972ecafe":{"roots":{"references":[{"attributes":{"callback":null,"column_names":["x","y","width","height","color","fill_alpha","line_color","line_alpha","label"],"data":{"HIT_RUN_FLAG":[2749],"SEVERITY":["Other injury accident"],"chart_index":[{"HIT_RUN_FLAG":2749,"SEVERITY":"Other injury accident"}],"color":["#225ea8"],"fill_alpha":[0.8],"height":[2749.0],"label":[{"HIT_RUN_FLAG":2749,"SEVERITY":"Other injury accident"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["Other injury accident"],"y":[1374.5]}},"id":"a529ba6e-9cfd-4013-a003-3a9fc5df2ed1","type":"ColumnDataSource"},{"attributes":{"dimension":1,"plot":{"id":"3a57c1a9-5f77-41cc-b0bd-480ff9d61abd","subtype":"Chart","type":"Plot"},"ticker":{"id":"4a73c6b7-b97b-49cc-83ef-570e51e3e2d3","type":"BasicTicker"}},"id":"e135f08e-3c02-4496-832e-4cb648c14f02","type":"Grid"},{"attributes":{},"id":"4afa69e8-f30b-4f64-8eab-05a578cf9f7c","type":"BasicTickFormatter"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"fa8287f1-500a-42e8-ab4b-737554f95eee","type":"Rect"},{"attributes":{"callback":null,"plot":{"id":"3a57c1a9-5f77-41cc-b0bd-480ff9d61abd","subtype":"Chart","type":"Plot"},"tooltips":[["Total hit and runs","@height"]]},"id":"77e21665-9e02-440d-b5b6-b7fc959cf657","type":"HoverTool"},{"attributes":{"data_source":{"id":"b1f79ce8-1deb-40e0-8ae9-7dd2e550b8fc","type":"ColumnDataSource"},"glyph":{"id":"ffcf66c8-cec3-4c35-b0fc-4f031138b8f7","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"72f396dc-3cfa-4829-b7bf-32a12cc10caa","type":"GlyphRenderer"},{"attributes":{},"id":"4a73c6b7-b97b-49cc-83ef-570e51e3e2d3","type":"BasicTicker"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"c20d6f7c-9dfc-46de-a66e-0e3b96daa5d7","type":"Rect"},{"attributes":{"plot":null,"text":null},"id":"7a97710b-2782-4199-bb71-5b427eeaf027","type":"Title"},{"attributes":{"fill_alpha":{"field":"fill_alpha"},"fill_color":{"field":"color"},"height":{"field":"height","units":"data"},"line_color":{"field":"line_color"},"width":{"field":"width","units":"data"},"x":{"field":"x"},"y":{"field":"y"}},"id":"ffcf66c8-cec3-4c35-b0fc-4f031138b8f7","type":"Rect"},{"attributes":{"callback":null,"column_names":["x","y","width","height","color","fill_alpha","line_color","line_alpha","label"],"data":{"HIT_RUN_FLAG":[930],"SEVERITY":["Serious injury accident"],"chart_index":[{"HIT_RUN_FLAG":930,"SEVERITY":"Serious injury accident"}],"color":["#253494"],"fill_alpha":[0.8],"height":[930.0],"label":[{"HIT_RUN_FLAG":930,"SEVERITY":"Serious injury accident"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["Serious injury accident"],"y":[465.0]}},"id":"c5e99723-4ef6-43a7-b174-f69acf2986d1","type":"ColumnDataSource"},{"attributes":{},"id":"ea649d7e-d870-4cb4-9051-183885693c2d","type":"CategoricalTickFormatter"},{"attributes":{"axis_label":"Severity of accident","formatter":{"id":"ea649d7e-d870-4cb4-9051-183885693c2d","type":"CategoricalTickFormatter"},"major_label_orientation":0.7853981633974483,"plot":{"id":"3a57c1a9-5f77-41cc-b0bd-480ff9d61abd","subtype":"Chart","type":"Plot"},"ticker":{"id":"8f27240f-8c6b-4849-b178-4952d88092a4","type":"CategoricalTicker"}},"id":"13ca3429-5837-4d82-8445-0ad7919be337","type":"CategoricalAxis"},{"attributes":{"label":{"value":"('Serious injury accident', 930)"},"renderers":[{"id":"bfd1b2f6-b279-48ec-b006-25abb501ded4","type":"GlyphRenderer"}]},"id":"670f93ca-f325-4680-826d-532332c9feec","type":"LegendItem"},{"attributes":{"axis_label":"Total number of hit and runs","formatter":{"id":"4afa69e8-f30b-4f64-8eab-05a578cf9f7c","type":"BasicTickFormatter"},"plot":{"id":"3a57c1a9-5f77-41cc-b0bd-480ff9d61abd","subtype":"Chart","type":"Plot"},"ticker":{"id":"4a73c6b7-b97b-49cc-83ef-570e51e3e2d3","type":"BasicTicker"}},"id":"8cca25a0-2083-4642-b325-3642ae1143cb","type":"LinearAxis"},{"attributes":{"label":{"value":"('Fatal accident', 30)"},"renderers":[{"id":"72f396dc-3cfa-4829-b7bf-32a12cc10caa","type":"GlyphRenderer"}]},"id":"b520f771-b627-4b55-b34c-55c608ad6f19","type":"LegendItem"},{"attributes":{"below":[{"id":"13ca3429-5837-4d82-8445-0ad7919be337","type":"CategoricalAxis"}],"css_classes":null,"left":[{"id":"8cca25a0-2083-4642-b325-3642ae1143cb","type":"LinearAxis"}],"plot_height":720,"plot_width":720,"renderers":[{"id":"581f8f29-8ff9-4d89-ace0-186ba48aca6c","type":"GlyphRenderer"},{"id":"bfd1b2f6-b279-48ec-b006-25abb501ded4","type":"GlyphRenderer"},{"id":"72f396dc-3cfa-4829-b7bf-32a12cc10caa","type":"GlyphRenderer"},{"id":"2147bdba-9280-4182-98af-5367796cae6f","type":"Legend"},{"id":"13ca3429-5837-4d82-8445-0ad7919be337","type":"CategoricalAxis"},{"id":"8cca25a0-2083-4642-b325-3642ae1143cb","type":"LinearAxis"},{"id":"e135f08e-3c02-4496-832e-4cb648c14f02","type":"Grid"}],"sizing_mode":"scale_both","title":{"id":"7a97710b-2782-4199-bb71-5b427eeaf027","type":"Title"},"tool_events":{"id":"28b9d46e-3164-4ef6-a25c-0f7f1850cf61","type":"ToolEvents"},"toolbar":{"id":"9b35450d-8bf5-4fc3-bff2-0481299a588e","type":"Toolbar"},"x_mapper_type":"auto","x_range":{"id":"2790dbd1-4e1f-4192-9cac-46c43a57ba9c","type":"FactorRange"},"y_mapper_type":"auto","y_range":{"id":"e4cf4d2c-4acd-4949-b7b7-90ce6f2670f5","type":"Range1d"}},"id":"3a57c1a9-5f77-41cc-b0bd-480ff9d61abd","subtype":"Chart","type":"Plot"},{"attributes":{"items":[{"id":"6f647ccf-a380-460a-9442-19b93f0de072","type":"LegendItem"},{"id":"670f93ca-f325-4680-826d-532332c9feec","type":"LegendItem"},{"id":"b520f771-b627-4b55-b34c-55c608ad6f19","type":"LegendItem"}],"plot":{"id":"3a57c1a9-5f77-41cc-b0bd-480ff9d61abd","subtype":"Chart","type":"Plot"}},"id":"2147bdba-9280-4182-98af-5367796cae6f","type":"Legend"},{"attributes":{},"id":"28b9d46e-3164-4ef6-a25c-0f7f1850cf61","type":"ToolEvents"},{"attributes":{},"id":"8f27240f-8c6b-4849-b178-4952d88092a4","type":"CategoricalTicker"},{"attributes":{"callback":null,"column_names":["x","y","width","height","color","fill_alpha","line_color","line_alpha","label"],"data":{"HIT_RUN_FLAG":[30],"SEVERITY":["Fatal accident"],"chart_index":[{"HIT_RUN_FLAG":30,"SEVERITY":"Fatal accident"}],"color":["#081d58"],"fill_alpha":[0.8],"height":[30.0],"label":[{"HIT_RUN_FLAG":30,"SEVERITY":"Fatal accident"}],"line_alpha":[1.0],"line_color":["white"],"width":[0.8],"x":["Fatal accident"],"y":[15.0]}},"id":"b1f79ce8-1deb-40e0-8ae9-7dd2e550b8fc","type":"ColumnDataSource"},{"attributes":{"callback":null,"factors":["Other injury accident","Serious injury accident","Fatal accident"]},"id":"2790dbd1-4e1f-4192-9cac-46c43a57ba9c","type":"FactorRange"},{"attributes":{"data_source":{"id":"c5e99723-4ef6-43a7-b174-f69acf2986d1","type":"ColumnDataSource"},"glyph":{"id":"c20d6f7c-9dfc-46de-a66e-0e3b96daa5d7","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"bfd1b2f6-b279-48ec-b006-25abb501ded4","type":"GlyphRenderer"},{"attributes":{"label":{"value":"('Other injury accident', 2749)"},"renderers":[{"id":"581f8f29-8ff9-4d89-ace0-186ba48aca6c","type":"GlyphRenderer"}]},"id":"6f647ccf-a380-460a-9442-19b93f0de072","type":"LegendItem"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"77e21665-9e02-440d-b5b6-b7fc959cf657","type":"HoverTool"}]},"id":"9b35450d-8bf5-4fc3-bff2-0481299a588e","type":"Toolbar"},{"attributes":{"data_source":{"id":"a529ba6e-9cfd-4013-a003-3a9fc5df2ed1","type":"ColumnDataSource"},"glyph":{"id":"fa8287f1-500a-42e8-ab4b-737554f95eee","type":"Rect"},"hover_glyph":null,"nonselection_glyph":null,"selection_glyph":null},"id":"581f8f29-8ff9-4d89-ace0-186ba48aca6c","type":"GlyphRenderer"},{"attributes":{"callback":null,"end":2886.45},"id":"e4cf4d2c-4acd-4949-b7b7-90ce6f2670f5","type":"Range1d"}],"root_ids":["3a57c1a9-5f77-41cc-b0bd-480ff9d61abd"]},"title":"Bokeh Application","version":"0.12.4"}};
+              var render_items = [{"docid":"8f849abb-56a7-43d8-a27e-9ce2972ecafe","elementid":"48f75e83-163b-43be-a239-7aef5828a4f6","modelid":"3a57c1a9-5f77-41cc-b0bd-480ff9d61abd"}];
+              
+              Bokeh.embed.embed_items(docs_json, render_items);
+            });
+          };
+          if (document.readyState != "loading") fn();
+          else document.addEventListener("DOMContentLoaded", fn);
+        })();
+        
+        </script>
+    </body>
+</html>
