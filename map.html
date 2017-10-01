@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Googlemaps Heatmap Layer</title>
+    <style>
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0; font-family:sans-serif; }
+      #map-canvas { height: 100% }
+      h1 { position:absolute; background:black; color:white; padding:10px; font-weight:200; z-index:10000;}
+      #all-examples-info { position:absolute; background:white; font-size:16px; padding:20px; bottom:20px; width:350px; line-height:150%; border:1px solid rgba(0,0,0,.2);}
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7TRY2N9T8zilHXuhuL86ZQBl0yXd5n84"></script>
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="heatmap_files/build/heatmap.js"></script>
+    <script src="heatmap_files/plugins/gmaps-heatmap/gmaps-heatmap.js"></script>
+  </head>
+  <body>
+    <div id="form">
+    <form id="ajax-form" method="POST"> <label> <input type="checkbox" value="bike" name="Bike" /> hey this works </label><input type="submit" name="evaluate" id="evaluate" value="Evaluate"> </form>
+    </div>
+    <div id="map-canvas"></div>
+    
+    
+    <script>
+
+   	
+    // map center
+    var myLatlng = new google.maps.LatLng(-37.217478, 144.793633);
+    // map options,
+    var myOptions = {
+      zoom: 7,
+      center: myLatlng
+    };
+    // standard map
+    map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+    // heatmap layer
+    heatmap = new HeatmapOverlay(map, 
+      {
+        // radius should be small ONLY if scaleRadius is true (or small radius is intended)
+        "radius": 0.005,
+        "maxOpacity": 01, 
+        // scales the radius based on map zoom
+        "scaleRadius": true, 
+        // if set to false the heatmap uses the global maximum for colorization
+        // if activated: uses the data maximum within the current map boundaries 
+        //   (there will always be a red spot with useLocalExtremas true)
+        "useLocalExtrema": true,
+        // which field name in your data represents the latitude - default "lat"
+        latField: 'lat',
+        // which field name in your data represents the longitude - default "lng"
+        lngField: 'lng',
+        // which field name in your data represents the data value - default "value"
+        valueField: 'count'
+      }
+    );
+
+    var json_data = {};
+
+	function ajaxRequest(e) {
+		var responseType='JSON';
+		var formData = $('#ajax-form').serializeArray();
+		var requestType = 'application/json'
+		$.ajax({
+			type: 'POST',
+			url: '/map',
+			contentType: requestType,
+			dataType: responseType,
+			data: JSON.stringify(formData),
+			success: function(json){
+				heatmap.setData(json);
+				console.log(json_data)
+			}
+		});
+		e.preventDefault();
+	}
+
+
+	$(document).ready(
+	  function docInit() {
+	  	$('#evaluate').click(ajaxRequest); // call function ajaxRequest upon clicking
+	  }
+	);
+
+
+	</script>
+  </body>
+</html>
